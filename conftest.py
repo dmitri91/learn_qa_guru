@@ -5,6 +5,6 @@ from selene import browser
 @pytest.fixture(autouse=True)
 def web_browser():
     browser.open('https://google.com')
-    browser.driver.maximize_window()
+    browser.driver.set_window_size(720, 480)
     yield browser
     browser.quit()
